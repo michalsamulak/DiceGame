@@ -1,9 +1,13 @@
 import '../scss/main.scss';
 
-// uncomment the lines below to enable PWA
-// import {registerSW} from './pwa.js';
-// registerSW();
 
-/* place your code below */
+var scores, roundScore, activePlayer, dice;
 
-console.log('HELLO 🚀')
+scores = [0,0];
+roundScore = 0;
+activePlayer = 1;
+
+dice = Math.floor(Math.random() * 6) + 1;
+console.log(dice)
+
+document.querySelector(`#current--${activePlayer}`).textContent = dice;
